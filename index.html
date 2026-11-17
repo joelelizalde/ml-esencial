@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Learning · Edición esencial</title>
+<meta name="description" content="Edición esencial del curso de machine learning en español: 19 módulos, 76 lecciones, evaluaciones, diagramas y manual en PDF. Basado en el libro de Aurélien Géron.">
+<meta name="theme-color" content="#f5f1e8">
+<link rel="stylesheet" href="css/curso.css">
+<script>(function(){try{var t=localStorage.getItem('mle_esencial_theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+
+</head>
+<body class="is-home">
+<a class="skip" href="#temario">Saltar al temario</a>
+<header class="masthead">
+  <a class="brand" href="index.html"><span class="brand-mark">ML</span><span class="brand-text"><strong>Machine Learning</strong><span>Edición esencial</span></span></a>
+  <nav class="mast-nav" aria-label="Principal"><a href="#temario">Temario</a><a href="#metodo">Método</a><a href="glosario.html">Glosario</a><a href="progreso.html">Mi progreso</a></nav>
+  <div class="mast-actions">
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"></path></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
+    <a class="mast-cta" href="ml1l1.html">Empezar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="eyebrow">Edición esencial · 2026</span>
+    <h1>Machine learning,<br>sin perderse <em>nada</em>.</h1>
+    <p class="lede">La edición esencial para aprender haciendo: de un proyecto completo con scikit-learn a las redes neuronales con PyTorch, la visión por computadora y los modelos generativos. Con criterio, ejemplos y sin relleno.</p>
+    <div class="hero-actions">
+      <a class="btn btn-ink" href="ml1l1.html">Abrir la primera lección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="btn btn-line" href="Machine-Learning-Esencial.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"></path></svg> Descargar el PDF</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>76</b><span>Lecciones</span></div>
+      <div class="hero-stat"><b>19</b><span>Módulos</span></div>
+      <div class="hero-stat"><b>8 h</b><span>De lectura</span></div>
+      <div class="hero-stat"><b>57</b><span>Diagramas</span></div>
+    </div>
+  </div>
+  <aside class="pass" aria-label="Tu progreso en el curso">
+    <div class="pass-top"><span class="eyebrow">Pase de estudiante</span><span class="pass-edition">MLE · 2026<br>Español</span></div>
+    <div class="pass-main"><span class="pass-big">76</span><span class="pass-big-label">lecciones<br>por recorrer</span></div>
+    <p class="pass-desc">Tu avance se guarda en este navegador. Empieza por donde quieras: el curso está pensado para leerse en orden.</p>
+    <div class="pass-progress"><div class="bar"><i data-bar></i></div><span><b data-done-count>0</b> / 76</span></div>
+    <div class="pass-actions">
+      <a class="btn btn-cream" data-resume href="ml1l1.html"><span><span data-resume-label>Empezar el curso</span><br><small style="font-weight:500;opacity:.7;font-size:10px" data-resume-title>Qué es, y qué no es, el machine learning</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="btn btn-line" style="border-color:rgba(255,255,255,.22);color:#e9e1d1" href="Machine-Learning-Esencial.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"></path></svg> Manual esencial en PDF</a>
+    </div>
+    <div class="pass-note"><span>19 evaluaciones</span><span>Acceso libre</span></div>
+  </aside>
+</section>
+
+<section class="section" id="temario">
+  <div class="section-head">
+    <div><span class="eyebrow">Plan de estudios</span><h2>Todo el temario, a la vista.</h2></div>
+    <p>Diecinueve módulos que recorren el ciclo completo de un proyecto real: mirar los datos, elegir el modelo, medir, entrenar, evaluar y desplegar.</p>
+    <button class="text-toggle" type="button" data-toggle-all>Contraer el temario</button>
+  </div>
+  <details class="module" data-module="01" open>
+  <summary>
+    <span class="module-num">01</span>
+    <span class="module-title-wrap"><span class="module-title">El paisaje del machine learning</span><span class="module-sub">Qué significa aprender de los datos y por qué casi todo depende de la generalización</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="01">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="01"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml1l1" href="ml1l1.html">
+  <span class="row-num">01.1</span>
+  <span class="row-title">Qué es, y qué no es, el machine learning</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml1l2" href="ml1l2.html">
+  <span class="row-num">01.2</span>
+  <span class="row-title">Los tipos de sistemas de aprendizaje</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml1l3" href="ml1l3.html">
+  <span class="row-num">01.3</span>
+  <span class="row-title">Los desafíos reales: datos, sobreajuste y generalización</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml1q" href="ml1q.html">
+  <span class="row-num">01.4</span>
+  <span class="row-title">Cierre del módulo 01</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="02" open>
+  <summary>
+    <span class="module-num">02</span>
+    <span class="module-title-wrap"><span class="module-title">Un proyecto de principio a fin</span><span class="module-sub">Del problema de negocio al modelo en producción, sin saltarse pasos</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="02">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="02"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml2l1" href="ml2l1.html">
+  <span class="row-num">02.1</span>
+  <span class="row-title">Enmarcar el problema y mirar el panorama</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml2l2" href="ml2l2.html">
+  <span class="row-num">02.2</span>
+  <span class="row-title">Explorar, preparar y limpiar los datos</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml2l3" href="ml2l3.html">
+  <span class="row-num">02.3</span>
+  <span class="row-title">Entrenar, ajustar y poner en producción</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml2q" href="ml2q.html">
+  <span class="row-num">02.4</span>
+  <span class="row-title">Cierre del módulo 02</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="03" open>
+  <summary>
+    <span class="module-num">03</span>
+    <span class="module-title-wrap"><span class="module-title">Clasificación</span><span class="module-sub">Medir bien un clasificador es más difícil que entrenarlo</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="03">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="03"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml3l1" href="ml3l1.html">
+  <span class="row-num">03.1</span>
+  <span class="row-title">Un clasificador binario y sus métricas</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml3l2" href="ml3l2.html">
+  <span class="row-num">03.2</span>
+  <span class="row-title">Precisión, recall, F1 y curvas ROC</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml3l3" href="ml3l3.html">
+  <span class="row-num">03.3</span>
+  <span class="row-title">Multicategoría, multietiqueta y análisis de errores</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml3q" href="ml3q.html">
+  <span class="row-num">03.4</span>
+  <span class="row-title">Cierre del módulo 03</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="04" open>
+  <summary>
+    <span class="module-num">04</span>
+    <span class="module-title-wrap"><span class="module-title">Entrenar modelos</span><span class="module-sub">De la regresión lineal al descenso de gradiente y la regularización</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="04">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="04"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml4l1" href="ml4l1.html">
+  <span class="row-num">04.1</span>
+  <span class="row-title">Regresión lineal y descenso de gradiente</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml4l2" href="ml4l2.html">
+  <span class="row-num">04.2</span>
+  <span class="row-title">Regresión polinómica, curvas de aprendizaje y sesgo-varianza</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml4l3" href="ml4l3.html">
+  <span class="row-num">04.3</span>
+  <span class="row-title">Regularización y regresión logística</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml4q" href="ml4q.html">
+  <span class="row-num">04.4</span>
+  <span class="row-title">Cierre del módulo 04</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="05" open>
+  <summary>
+    <span class="module-num">05</span>
+    <span class="module-title-wrap"><span class="module-title">Árboles de decisión</span><span class="module-sub">Reglas interpretables, con fama merecida de inestables</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="05">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="05"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml5l1" href="ml5l1.html">
+  <span class="row-num">05.1</span>
+  <span class="row-title">Cómo decide un árbol: CART e impureza</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml5l2" href="ml5l2.html">
+  <span class="row-num">05.2</span>
+  <span class="row-title">Poda, hiperparámetros y regresión con árboles</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml5l3" href="ml5l3.html">
+  <span class="row-num">05.3</span>
+  <span class="row-title">Límites del árbol: varianza alta y fronteras en ejes</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml5q" href="ml5q.html">
+  <span class="row-num">05.4</span>
+  <span class="row-title">Cierre del módulo 05</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="06" open>
+  <summary>
+    <span class="module-num">06</span>
+    <span class="module-title-wrap"><span class="module-title">Ensembles y bosques aleatorios</span><span class="module-sub">Combinar modelos débiles para obtener uno más fuerte</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="06">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="06"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml6l1" href="ml6l1.html">
+  <span class="row-num">06.1</span>
+  <span class="row-title">Votación y bagging</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml6l2" href="ml6l2.html">
+  <span class="row-num">06.2</span>
+  <span class="row-title">Bosques aleatorios y boosting</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml6l3" href="ml6l3.html">
+  <span class="row-num">06.3</span>
+  <span class="row-title">Stacking y cuándo usar cada familia</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml6q" href="ml6q.html">
+  <span class="row-num">06.4</span>
+  <span class="row-title">Cierre del módulo 06</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="07" open>
+  <summary>
+    <span class="module-num">07</span>
+    <span class="module-title-wrap"><span class="module-title">Reducción de dimensionalidad</span><span class="module-sub">Cuando más variables dejan de ser una ventaja</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="07">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="07"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml7l1" href="ml7l1.html">
+  <span class="row-num">07.1</span>
+  <span class="row-title">La maldición de la dimensionalidad</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml7l2" href="ml7l2.html">
+  <span class="row-num">07.2</span>
+  <span class="row-title">Análisis de componentes principales</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml7l3" href="ml7l3.html">
+  <span class="row-num">07.3</span>
+  <span class="row-title">Kernel PCA, manifold y selección de variables</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml7q" href="ml7q.html">
+  <span class="row-num">07.4</span>
+  <span class="row-title">Cierre del módulo 07</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="08" open>
+  <summary>
+    <span class="module-num">08</span>
+    <span class="module-title-wrap"><span class="module-title">Aprendizaje no supervisado</span><span class="module-sub">Descubrir grupos, densidades y casos raros sin etiquetas</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="08">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="08"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml8l1" href="ml8l1.html">
+  <span class="row-num">08.1</span>
+  <span class="row-title">K-means y la búsqueda de centroides</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml8l2" href="ml8l2.html">
+  <span class="row-num">08.2</span>
+  <span class="row-title">Clustering jerárquico y DBSCAN</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml8l3" href="ml8l3.html">
+  <span class="row-num">08.3</span>
+  <span class="row-title">Mezclas gaussianas y detección de anomalías</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml8q" href="ml8q.html">
+  <span class="row-num">08.4</span>
+  <span class="row-title">Cierre del módulo 08</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="09" open>
+  <summary>
+    <span class="module-num">09</span>
+    <span class="module-title-wrap"><span class="module-title">Introducción a las redes neuronales</span><span class="module-sub">De la neurona artificial a la retropropagación</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="09">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="09"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml9l1" href="ml9l1.html">
+  <span class="row-num">09.1</span>
+  <span class="row-title">Del perceptrón a la capa densa</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml9l2" href="ml9l2.html">
+  <span class="row-num">09.2</span>
+  <span class="row-title">Activaciones y la pasada hacia delante</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml9l3" href="ml9l3.html">
+  <span class="row-num">09.3</span>
+  <span class="row-title">Retropropagación y un paso de entrenamiento</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml9q" href="ml9q.html">
+  <span class="row-num">09.4</span>
+  <span class="row-title">Cierre del módulo 09</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="10" open>
+  <summary>
+    <span class="module-num">10</span>
+    <span class="module-title-wrap"><span class="module-title">Entrenamiento con PyTorch</span><span class="module-sub">Tensores, gradientes automáticos y el bucle que lo sostiene todo</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="10">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="10"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml10l1" href="ml10l1.html">
+  <span class="row-num">10.1</span>
+  <span class="row-title">Tensores, dispositivos y formas</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml10l2" href="ml10l2.html">
+  <span class="row-num">10.2</span>
+  <span class="row-title">Autograd y el bucle de entrenamiento</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml10l3" href="ml10l3.html">
+  <span class="row-num">10.3</span>
+  <span class="row-title">Guardar, cargar y depurar un entrenamiento</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml10q" href="ml10q.html">
+  <span class="row-num">10.4</span>
+  <span class="row-title">Cierre del módulo 10</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="11" open>
+  <summary>
+    <span class="module-num">11</span>
+    <span class="module-title-wrap"><span class="module-title">Entrenamiento de redes profundas</span><span class="module-sub">Estabilidad, regularización y optimización en modelos grandes</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="11">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="11"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml11l1" href="ml11l1.html">
+  <span class="row-num">11.1</span>
+  <span class="row-title">Activaciones, inicialización y gradientes</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml11l2" href="ml11l2.html">
+  <span class="row-num">11.2</span>
+  <span class="row-title">Normalización, dropout y regularización</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml11l3" href="ml11l3.html">
+  <span class="row-num">11.3</span>
+  <span class="row-title">Optimizadores, programación de la tasa y parada</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml11q" href="ml11q.html">
+  <span class="row-num">11.4</span>
+  <span class="row-title">Cierre del módulo 11</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="12" open>
+  <summary>
+    <span class="module-num">12</span>
+    <span class="module-title-wrap"><span class="module-title">Modelos personalizados</span><span class="module-sub">Escribir capas, pérdidas y diagnósticos cuando la caja lista no basta</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="12">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="12"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml12l1" href="ml12l1.html">
+  <span class="row-num">12.1</span>
+  <span class="row-title">Capas y bloques propios</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml12l2" href="ml12l2.html">
+  <span class="row-num">12.2</span>
+  <span class="row-title">Pérdidas y métricas a medida</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml12l3" href="ml12l3.html">
+  <span class="row-num">12.3</span>
+  <span class="row-title">Depurar un modelo que no aprende</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml12q" href="ml12q.html">
+  <span class="row-num">12.4</span>
+  <span class="row-title">Cierre del módulo 12</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="13" open>
+  <summary>
+    <span class="module-num">13</span>
+    <span class="module-title-wrap"><span class="module-title">Cargar y preparar datos con PyTorch</span><span class="module-sub">La tubería de datos decide la velocidad del entrenamiento</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="13">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="13"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml13l1" href="ml13l1.html">
+  <span class="row-num">13.1</span>
+  <span class="row-title">Dataset y DataLoader propios</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml13l2" href="ml13l2.html">
+  <span class="row-num">13.2</span>
+  <span class="row-title">Transformaciones, aumento de datos y colación</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml13l3" href="ml13l3.html">
+  <span class="row-num">13.3</span>
+  <span class="row-title">Tuberías eficientes para datos grandes</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml13q" href="ml13q.html">
+  <span class="row-num">13.4</span>
+  <span class="row-title">Cierre del módulo 13</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="14" open>
+  <summary>
+    <span class="module-num">14</span>
+    <span class="module-title-wrap"><span class="module-title">Visión por computador</span><span class="module-sub">Convoluciones, aumento de datos y transferencia</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="14">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="14"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml14l1" href="ml14l1.html">
+  <span class="row-num">14.1</span>
+  <span class="row-title">Convolución: compartir pesos y mirar vecindades</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml14l2" href="ml14l2.html">
+  <span class="row-num">14.2</span>
+  <span class="row-title">Arquitecturas, aumento de datos y entrenamiento</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml14l3" href="ml14l3.html">
+  <span class="row-num">14.3</span>
+  <span class="row-title">Transferencia y evaluación por clase</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml14q" href="ml14q.html">
+  <span class="row-num">14.4</span>
+  <span class="row-title">Cierre del módulo 14</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="15" open>
+  <summary>
+    <span class="module-num">15</span>
+    <span class="module-title-wrap"><span class="module-title">Secuencias y redes recurrentes</span><span class="module-sub">Modelos que leen en orden y recuerdan un estado</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="15">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="15"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml15l1" href="ml15l1.html">
+  <span class="row-num">15.1</span>
+  <span class="row-title">El estado oculto</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml15l2" href="ml15l2.html">
+  <span class="row-num">15.2</span>
+  <span class="row-title">LSTM, GRU y compuertas</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml15l3" href="ml15l3.html">
+  <span class="row-num">15.3</span>
+  <span class="row-title">Evaluación, generación y alternativas</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml15q" href="ml15q.html">
+  <span class="row-num">15.4</span>
+  <span class="row-title">Cierre del módulo 15</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="16" open>
+  <summary>
+    <span class="module-num">16</span>
+    <span class="module-title-wrap"><span class="module-title">Procesamiento de lenguaje natural</span><span class="module-sub">Del texto a vectores, de la atención a los transformers</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="16">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="16"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml16l1" href="ml16l1.html">
+  <span class="row-num">16.1</span>
+  <span class="row-title">Del texto a vectores</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml16l2" href="ml16l2.html">
+  <span class="row-num">16.2</span>
+  <span class="row-title">Atención y transformers</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml16l3" href="ml16l3.html">
+  <span class="row-num">16.3</span>
+  <span class="row-title">Modelos preentrenados y evaluación</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml16q" href="ml16q.html">
+  <span class="row-num">16.4</span>
+  <span class="row-title">Cierre del módulo 16</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="17" open>
+  <summary>
+    <span class="module-num">17</span>
+    <span class="module-title-wrap"><span class="module-title">Autoencoders, GANs y modelos de difusión</span><span class="module-sub">Generar datos nuevos con criterio</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="17">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="17"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml17l1" href="ml17l1.html">
+  <span class="row-num">17.1</span>
+  <span class="row-title">Autoencoders y espacio latente</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml17l2" href="ml17l2.html">
+  <span class="row-num">17.2</span>
+  <span class="row-title">GANs: generador, discriminador y modos colapsados</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml17l3" href="ml17l3.html">
+  <span class="row-num">17.3</span>
+  <span class="row-title">Modelos de difusión</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml17q" href="ml17q.html">
+  <span class="row-num">17.4</span>
+  <span class="row-title">Cierre del módulo 17</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="18" open>
+  <summary>
+    <span class="module-num">18</span>
+    <span class="module-title-wrap"><span class="module-title">Aprendizaje por refuerzo</span><span class="module-sub">Aprender de consecuencias, no de etiquetas</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="18">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="18"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml18l1" href="ml18l1.html">
+  <span class="row-num">18.1</span>
+  <span class="row-title">Estados, acciones y recompensas</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml18l2" href="ml18l2.html">
+  <span class="row-num">18.2</span>
+  <span class="row-title">Q-learning y gradientes de política</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml18l3" href="ml18l3.html">
+  <span class="row-num">18.3</span>
+  <span class="row-title">Entrenar agentes: estabilidad y evaluación</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml18q" href="ml18q.html">
+  <span class="row-num">18.4</span>
+  <span class="row-title">Cierre del módulo 18</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details><details class="module" data-module="19" open>
+  <summary>
+    <span class="module-num">19</span>
+    <span class="module-title-wrap"><span class="module-title">Entrenamiento y despliegue a escala</span><span class="module-sub">Del cuaderno a producción sin perder el juicio</span></span>
+    <span class="module-meta">4 lecciones · 0.4 h<br><span data-modcount="19">0/4</span> completadas</span>
+    <svg class="module-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 9 6 6 6-6"></path></svg>
+  </summary>
+  <div class="module-progress" aria-hidden="true"><i data-modbar="19"></i></div>
+  <div class="module-body"><a class="row" data-lesson-row="ml19l1" href="ml19l1.html">
+  <span class="row-num">19.1</span>
+  <span class="row-title">Entrenamiento distribuido y datos a escala</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml19l2" href="ml19l2.html">
+  <span class="row-num">19.2</span>
+  <span class="row-title">Servir modelos y optimizar la inferencia</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row" data-lesson-row="ml19l3" href="ml19l3.html">
+  <span class="row-num">19.3</span>
+  <span class="row-title">Monitorización, deriva y mantenimiento</span>
+  <span class="row-type">Lección</span>
+  <span class="row-time">4 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a><a class="row quiz" data-lesson-row="ml19q" href="ml19q.html">
+  <span class="row-num">19.4</span>
+  <span class="row-title">Cierre del módulo 19</span>
+  <span class="row-type">Examen</span>
+  <span class="row-time">10 min</span>
+  <span class="row-check" aria-hidden="true"></span>
+</a></div>
+</details>
+</section>
+
+<section class="section" id="metodo">
+  <div class="section-head">
+    <div><span class="eyebrow">Cómo está pensado</span><h2>Leer, comprobar, construir.</h2></div>
+    <p>Una experiencia de lectura continua: sin botones que te devuelvan al inicio y sin callejones sin salida.</p>
+  </div>
+  <div class="method-grid">
+    <div class="method"><span class="n">01</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg><h3>Avanza sin fricción</h3><p>Cada lección termina con «Completar y seguir». También funcionan las flechas ← y → del teclado. El temario siempre está a un clic.</p></div>
+    <div class="method"><span class="n">02</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"></path></svg><h3>Comprueba lo aprendido</h3><p>Al cerrar cada módulo, una evaluación de tres preguntas y ejercicios aplicados. No hay notas: hay criterio.</p></div>
+    <div class="method"><span class="n">03</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"></path></svg><h3>Llévatelo contigo</h3><p>El manual esencial en PDF incluye las 76 lecciones, los diagramas y las evaluaciones para leer o imprimir sin conexión.</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div><span class="eyebrow" style="color:#ff8a5c">Sigue construyendo</span><h2>El modelo no es el sistema.</h2><p>Este manual convierte los temas de <em>Hands-On Machine Learning</em> en un recorrido práctico: datos, métricas, modelos y despliegue. Úsalo para construir con criterio, no para memorizar APIs.</p></div>
+    <div class="foot-links"><a href="ml1l1.html">Empezar el curso →</a><a href="glosario.html">Glosario de términos →</a><a href="progreso.html">Mi progreso →</a><a href="Machine-Learning-Esencial.pdf">Manual en PDF →</a></div>
+  </div>
+  <div class="foot-bottom"><span>Machine Learning · Edición esencial · 2026</span><span>Manual original · Temas de Aurélien Géron</span></div>
+</footer>
+<div class="searchbox" data-search role="dialog" aria-modal="true" aria-label="Buscar en el curso">
+  <div class="search-panel">
+    <div class="search-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg><input class="search-input" type="search" placeholder="Busca una lección o un tema…" aria-label="Buscar una lección o un tema" autocomplete="off"><button class="search-close" type="button" data-search-close>ESC</button></div>
+    <div class="search-results"></div>
+    <div class="sr-hint"><span>↑ ↓ para navegar · Enter para abrir</span><span>Esc para cerrar</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script>window.MLE={"total":76,"current":null,"next":null,"prev":null,"modules":[{"num":"01","title":"El paisaje del machine learning","lessons":[{"id":"ml1l1","num":1,"lnum":1,"title":"Qué es, y qué no es, el machine learning","href":"ml1l1.html","kind":"lesson","search":"Aprender es ajustar, no memorizar Cuándo conviene y cuándo no El modelo es una pieza, no el producto Aprender es generalizar: rendir en casos nuevos, no recordar los de entrenamiento. Si una regla explícita y auditable basta, el modelo añade coste sin añadir valor. El modelo es una pieza dentro de un sistema de datos, software y personas. La calidad del dato pone el techo; el algoritmo solo se acerca a ese techo."},{"id":"ml1l2","num":2,"lnum":2,"title":"Los tipos de sistemas de aprendizaje","href":"ml1l2.html","kind":"lesson","search":"Aprendizaje supervisado Aprendizaje no supervisado Semiautomático y refuerzo La señal de supervisión define el problema, no el algoritmo. Etiquetar es caro; su calidad limita el techo del modelo supervisado. Sin etiquetas, la evaluación requiere criterio externo y utilidad comprobable. En refuerzo, una recompensa mal diseñada produce un agente que optimiza lo incorrecto."},{"id":"ml1l3","num":3,"lnum":3,"title":"Los desafíos reales: datos, sobreajuste y generalización","href":"ml1l3.html","kind":"lesson","search":"Datos insuficientes o mal representados Sobreajuste y subajuste Evaluar sin engañarte Un sesgo en la muestra no se arregla con un modelo mejor. Sobreajuste y subajuste se detectan comparando dentro y fuera de muestra. La métrica se elige antes de ver los resultados y debe reflejar el coste del error. El conjunto de prueba se usa una vez; mirarlo repetidamente lo contamina."},{"id":"ml1q","num":4,"lnum":4,"title":"Cierre del módulo 01","href":"ml1q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios El machine learning construye programas que mejoran con ejemplos; su objetivo es generalizar, no memorizar. La señal de supervisión —etiquetas, estructura, recompensa— define la familia de problema y su forma de evaluarlo. Los tres enemigos del proyecto son datos poco representativos, ajuste excesivo y evaluación contaminada. Antes de elegir un algoritmo, define la métrica, reserva datos de prueba y revisa quién falta en la muestra."}]},{"num":"02","title":"Un proyecto de principio a fin","lessons":[{"id":"ml2l1","num":5,"lnum":1,"title":"Enmarcar el problema y mirar el panorama","href":"ml2l1.html","kind":"lesson","search":"Empezar por la decisión Elegir la métrica antes de ver resultados Establecer una referencia Sin una decisión concreta que mejorar, el proyecto no tiene métrica ni final. La métrica se elige antes de modelar y refleja el coste real de cada error. Una línea base simple dice si el modelo aporta algo y delata fugas de datos. Latencia, frecuencia y explicabilidad se deciden al principio, no al desplegar."},{"id":"ml2l2","num":6,"lnum":2,"title":"Explorar, preparar y limpiar los datos","href":"ml2l2.html","kind":"lesson","search":"Explorar con preguntas Preparar sin filtrar el futuro Construir variables con criterio Explorar es responder preguntas sobre calidad, rango, nulos y sesgo por segmento. Las transformaciones se ajustan solo con entrenamiento y se guardan con el modelo. Una variable derivada debe existir también en el momento de la predicción. Documentar cada limpieza permite reproducir el resultado y auditar errores."},{"id":"ml2l3","num":7,"lnum":3,"title":"Entrenar, ajustar y poner en producción","href":"ml2l3.html","kind":"lesson","search":"Comparar modelos con la misma vara Ajustar con criterio de coste Desplegar y vigilar Todos los candidatos se evalúan con las mismas particiones y la misma métrica. El conjunto de prueba se toca una vez, al final del proceso. El umbral de decisión se elige con costes de negocio, no solo con la métrica. En producción se vigilan errores, distribución de entrada y calidad de la predicción."},{"id":"ml2q","num":8,"lnum":4,"title":"Cierre del módulo 02","href":"ml2q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Un proyecto empieza por la decisión que mejora y por la métrica que la representa. Explorar y limpiar los datos descubre sesgos, fugas y valores imposibles antes de modelar. Las transformaciones se aprenden solo del entrenamiento y viajan con el modelo. El ciclo continúa tras el despliegue: se vigila, se compara y se vuelve a entrenar cuando hace falta."}]},{"num":"03","title":"Clasificación","lessons":[{"id":"ml3l1","num":9,"lnum":1,"title":"Un clasificador binario y sus métricas","href":"ml3l1.html","kind":"lesson","search":"La matriz de confusión Exactitud y desequilibrio Dividir bien los datos La matriz de confusión muestra qué tipo de error comete el modelo. La exactitud engaña cuando las clases están desequilibradas. La partición se estratifica y se agrupa cuando hay registros repetidos por entidad. La variabilidad entre particiones importa tanto como la media."},{"id":"ml3l2","num":10,"lnum":2,"title":"Precisión, recall, F1 y curvas ROC","href":"ml3l2.html","kind":"lesson","search":"Precisión y recall La curva ROC y el AUC Elegir el umbral con costes Precisión mide pureza de los positivos; recall mide cobertura de los reales. El umbral cambia el compromiso y debe elegirse con costes del dominio. El AUC compara modelos sin fijar umbral, pero no decide por ti. Con clases muy desequilibradas, la curva precisión-recall es más informativa."},{"id":"ml3l3","num":11,"lnum":3,"title":"Multicategoría, multietiqueta y análisis de errores","href":"ml3l3.html","kind":"lesson","search":"Una etiqueta frente a varias Estrategias y coste Analizar errores, no solo medirlos Multicategoría implica una clase por ejemplo; multietiqueta, varias independientes. Uno contra el resto escala mejor; uno contra uno separa clases confundibles. La matriz de confusión revela patrones de confusión entre clases. Revisar errores concretos descubre etiquetas ambiguas y criterios inconsistentes."},{"id":"ml3q","num":12,"lnum":4,"title":"Cierre del módulo 03","href":"ml3q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios La matriz de confusión describe el tipo de error; la exactitud sola puede engañar. Precisión y recall expresan un compromiso que depende del umbral y del coste. ROC y AUC comparan modelos, pero la curva precisión-recall es mejor con desequilibrio. El análisis de errores por clase y por segmento revela problemas de etiquetas y de datos."}]},{"num":"04","title":"Entrenar modelos","lessons":[{"id":"ml4l1","num":13,"lnum":1,"title":"Regresión lineal y descenso de gradiente","href":"ml4l1.html","kind":"lesson","search":"El modelo y su coste Descenso de gradiente Escalar antes de descender La regresión lineal minimiza el error cuadrático y tiene un mínimo global. La tasa de aprendizaje controla convergencia y estabilidad del descenso. Mini-lote es el compromiso habitual entre ruido y velocidad. Estandarizar las entradas acelera la convergencia y debe replicarse en producción."},{"id":"ml4l2","num":14,"lnum":2,"title":"Regresión polinómica, curvas de aprendizaje y sesgo-varianza","href":"ml4l2.html","kind":"lesson","search":"Añadir complejidad con cuidado Leer una curva de aprendizaje Sesgo, varianza y ruido Añadir términos polinómicos aumenta la capacidad y el riesgo de sobreajuste. Una curva de aprendizaje indica si faltan datos, si sobra modelo o si falta señal. El error se descompone en sesgo, varianza y ruido irreducible. Más flexibilidad reduce sesgo y aumenta varianza; hay que buscar el equilibrio."},{"id":"ml4l3","num":15,"lnum":3,"title":"Regularización y regresión logística","href":"ml4l3.html","kind":"lesson","search":"Ridge, Lasso y Elastic Net Regresión logística Probabilidad no es decisión Ridge encoge pesos; Lasso puede anular coeficientes y seleccionar variables. La fuerza de regularización se elige por validación cruzada. La regresión logística devuelve probabilidades y es una línea base sólida. Convertir probabilidad en clase exige un umbral basado en costes."},{"id":"ml4q","num":16,"lnum":4,"title":"Cierre del módulo 04","href":"ml4q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios El descenso de gradiente minimiza el coste y depende críticamente del escalado y la tasa. Las curvas de aprendizaje diagnostican falta de datos, exceso de modelo o falta de señal. Ridge, Lasso y Elastic Net limitan la complejidad de formas distintas. La regresión logística produce probabilidades que aún necesitan un umbral de decisión."}]},{"num":"05","title":"Árboles de decisión","lessons":[{"id":"ml5l1","num":17,"lnum":1,"title":"Cómo decide un árbol: CART e impureza","href":"ml5l1.html","kind":"lesson","search":"Dividir para purificar Leer el árbol Probabilidades en la hoja CART elige en cada nodo el corte que más reduce la impureza. Gini y entropía suelen producir árboles muy parecidos; la profundidad pesa más. La interpretabilidad se pierde cuando el árbol crece demasiado. Las probabilidades de las hojas dependen de pocos casos y suelen estar mal calibradas."},{"id":"ml5l2","num":18,"lnum":2,"title":"Poda, hiperparámetros y regresión con árboles","href":"ml5l2.html","kind":"lesson","search":"Hiperparámetros que importan Poda y coste-complejidad Árboles de regresión Profundidad y mínimos por nodo controlan la capacidad del árbol. La poda por coste-complejidad recorta después de crecer y suele ser más estable. En regresión, cada hoja predice la media de su grupo. Las predicciones escalonadas son un límite inherente del árbol de regresión."},{"id":"ml5l3","num":19,"lnum":3,"title":"Límites del árbol: varianza alta y fronteras en ejes","href":"ml5l3.html","kind":"lesson","search":"Alta varianza Fronteras en ejes Cuándo sí usar un árbol Pequeños cambios en los datos producen árboles muy distintos. Los cortes son paralelos a los ejes y generan fronteras dentadas. Limitar profundidad o promediar árboles reduce la varianza. El árbol brilla cuando la explicación es requisito, no cuando se busca máxima precisión."},{"id":"ml5q","num":20,"lnum":4,"title":"Cierre del módulo 05","href":"ml5q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Un árbol divide el espacio con cortes que maximizan la pureza de los grupos. La profundidad y los mínimos por nodo controlan el equilibrio entre sesgo y varianza. La poda recorta ramas que no mejoran la validación. Su alta varianza y sus fronteras en ejes explican por qué se combinan en ensembles."}]},{"num":"06","title":"Ensembles y bosques aleatorios","lessons":[{"id":"ml6l1","num":21,"lnum":1,"title":"Votación y bagging","href":"ml6l1.html","kind":"lesson","search":"Votación dura y blanda Bagging y pasting Muestras fuera de bolsa Combinar modelos reduce varianza si sus errores no están muy correlacionados. La votación blanda aprovecha probabilidades y suele superar a la dura. Bagging muestrea con reemplazo; pasting, sin reemplazo. Los casos fuera de bolsa dan una estimación de error casi gratuita."},{"id":"ml6l2","num":22,"lnum":2,"title":"Bosques aleatorios y boosting","href":"ml6l2.html","kind":"lesson","search":"Qué hace aleatorio a un bosque Importancia de variables Boosting y sus riesgos El bosque combina muestras aleatorias y subconjuntos de variables por corte. Más árboles estabilizan el resultado, pero encarecen la inferencia. La importancia por impureza es rápida y sesgada; contrástala con permutación. El boosting reduce sesgo y puede sobreajustar si se entrena demasiado."},{"id":"ml6l3","num":23,"lnum":3,"title":"Stacking y cuándo usar cada familia","href":"ml6l3.html","kind":"lesson","search":"Cómo se construye Elegir la familia Coste de mantener un ensemble El stacking combina predicciones fuera de pliegue con un meta-modelo. Usar predicciones dentro de pliegue introduce fuga y arruina la estimación. Bosques son robustos; boosting suele ganar precisión en tabular. Cada modelo añadido multiplica latencia y superficie de mantenimiento."},{"id":"ml6q","num":24,"lnum":4,"title":"Cierre del módulo 06","href":"ml6q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Combinar modelos reduce varianza cuando sus errores son diversos. Los bosques añaden aleatoriedad en muestras y variables para decorrelacionar árboles. El boosting entrena en secuencia y reduce sesgo, con riesgo de sobreajuste. El stacking exige predicciones fuera de pliegue y solo compensa si los modelos son diversos."}]},{"num":"07","title":"Reducción de dimensionalidad","lessons":[{"id":"ml7l1","num":25,"lnum":1,"title":"La maldición de la dimensionalidad","href":"ml7l1.html","kind":"lesson","search":"El volumen crece, la densidad cae Ruido, redundancia y coste Dos caminos distintos Con muchas dimensiones, los datos quedan dispersos y las distancias pierden significado. Variables redundantes o ruidosas añaden coste y sobreajuste sin aportar señal. Seleccionar conserva variables originales; proyectar crea ejes nuevos. Reducir dimensiones también mejora la velocidad y la auditabilidad del sistema."},{"id":"ml7l2","num":26,"lnum":2,"title":"Análisis de componentes principales","href":"ml7l2.html","kind":"lesson","search":"Encontrar los ejes de mayor varianza Cuántos componentes conservar Reconstrucción y límites PCA ordena ejes nuevos por la varianza que explican, no por su interpretabilidad. Centrar y escalar antes de aplicar PCA evita que una unidad domine el resultado. El número de componentes se valida con la métrica final, no solo con el porcentaje. El error de reconstrucción sirve para comprimir y para detectar casos raros."},{"id":"ml7l3","num":27,"lnum":3,"title":"Kernel PCA, manifold y selección de variables","href":"ml7l3.html","kind":"lesson","search":"Kernel PCA Métodos de variedad Selección supervisada Kernel PCA captura estructura no lineal a cambio de un coste cuadrático. t-SNE y UMAP sirven para visualizar vecindades, no para medir distancias globales. La selección supervisada puede basarse en filtros, wrappers o regularización. Seleccionar variables fuera de la validación cruzada introduce fuga de información."},{"id":"ml7q","num":28,"lnum":4,"title":"Cierre del módulo 07","href":"ml7q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios La maldición de la dimensionalidad dispersa los datos y encarece cualquier método basado en distancias. PCA construye ejes ortogonales ordenados por varianza y exige centrar y escalar antes. Kernel PCA y los métodos de variedad capturan estructuras no lineales con distintos costes. La selección de variables conserva interpretación y debe hacerse dentro de la validación."}]},{"num":"08","title":"Aprendizaje no supervisado","lessons":[{"id":"ml8l1","num":29,"lnum":1,"title":"K-means y la búsqueda de centroides","href":"ml8l1.html","kind":"lesson","search":"Asignar y actualizar Elegir k sin autoengaño Supuestos y límites K-means alterna asignación y recálculo de centroides hasta converger. La inicialización importa: k-means++ reduce mínimos locales pobres. Codo y silueta orientan, pero el número de grupos también se decide con el uso previsto. El algoritmo asume grupos compactos, esféricos y de escala comparable."},{"id":"ml8l2","num":30,"lnum":2,"title":"Clustering jerárquico y DBSCAN","href":"ml8l2.html","kind":"lesson","search":"Dendrogramas y criterios de enlace DBSCAN y la densidad Validar sin etiquetas El clustering jerárquico produce un árbol de fusiones que se corta a la altura elegida. El criterio de enlace modifica la forma de los grupos resultantes. DBSCAN encuentra grupos de forma arbitraria y marca el resto como ruido. Sin etiquetas, la utilidad posterior es la validación más convincente."},{"id":"ml8l3","num":31,"lnum":3,"title":"Mezclas gaussianas y detección de anomalías","href":"ml8l3.html","kind":"lesson","search":"Componentes y responsabilidades Anomalías por densidad o reconstrucción Evaluar con pocas etiquetas Una mezcla gaussiana produce asignaciones blandas y grupos elípticos. Los detectores de anomalías puntúan rareza, no gravedad para el negocio. El error de reconstrucción es una señal útil cuando hay pocos casos raros. Con pocas etiquetas, mide precisión en el top de alertas y respeta la capacidad de revisión."},{"id":"ml8q","num":32,"lnum":4,"title":"Cierre del módulo 08","href":"ml8q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios K-means es rápido y simple, pero impone grupos esféricos y un número fijo de ellos. El clustering jerárquico describe fusiones y DBSCAN descubre grupos por densidad. Las mezclas gaussianas aportan pertenencia probabilística y grupos elípticos. La detección de anomalías necesita un umbral ligado a la capacidad real de revisión."}]},{"num":"09","title":"Introducción a las redes neuronales","lessons":[{"id":"ml9l1","num":33,"lnum":1,"title":"Del perceptrón a la capa densa","href":"ml9l1.html","kind":"lesson","search":"La neurona artificial Apilar neuronas Por qué funcionan Una neurona es una suma ponderada con sesgo y activación. Una capa densa conecta todas las entradas con todas las salidas y se calcula como matriz. Sin no linealidades, apilar capas equivale a una única transformación lineal. Más capacidad exige más datos y más control del sobreajuste."},{"id":"ml9l2","num":34,"lnum":2,"title":"Activaciones y la pasada hacia delante","href":"ml9l2.html","kind":"lesson","search":"ReLU y su familia Formas y lotes La salida adecuada ReLU evita la saturación de sigmoide y acelera el entrenamiento profundo. La primera dimensión de un lote debe respetarse en todas las capas. Softmax se usa para clases excluyentes; sigmoide, para etiquetas independientes. La pérdida debe coincidir con la activación de salida."},{"id":"ml9l3","num":35,"lnum":3,"title":"Retropropagación y un paso de entrenamiento","href":"ml9l3.html","kind":"lesson","search":"La regla de la cadena El paso completo Sobreajuste en redes La retropropagación calcula gradientes reutilizando la pasada hacia delante. Cada paso debe poner los gradientes a cero antes de retroceder. Dropout, penalización y parada temprana controlan el sobreajuste. Más datos o mejores etiquetas suelen vencer a cualquier truco de regularización."},{"id":"ml9q","num":36,"lnum":4,"title":"Cierre del módulo 09","href":"ml9q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Una neurona combina entradas con pesos, añade sesgo y aplica una activación. Las capas densas se calculan como matrices y necesitan no linealidades para ganar capacidad. La activación y la pérdida de salida deben corresponder al tipo de problema. El entrenamiento repite forward, pérdida, backward y actualización, con gradientes a cero en cada paso."}]},{"num":"10","title":"Entrenamiento con PyTorch","lessons":[{"id":"ml10l1","num":37,"lnum":1,"title":"Tensores, dispositivos y formas","href":"ml10l1.html","kind":"lesson","search":"El tensor como contrato Mover datos tiene coste Formas que engañan Un tensor se define por forma, tipo y dispositivo, y los tres afectan al cálculo. Las vistas comparten memoria; modificarlas altera el tensor original. Mueve cada lote al dispositivo una sola vez, no dentro de cada operación. El broadcasting puede ocultar errores de forma; verifica dimensiones antes de entrenar."},{"id":"ml10l2","num":38,"lnum":2,"title":"Autograd y el bucle de entrenamiento","href":"ml10l2.html","kind":"lesson","search":"Grafos y requires_grad El bucle canónico Modos de entrenamiento y evaluación Autograd construye un grafo por iteración y lo libera al retroceder. El orden del bucle es cero, forward, pérdida, backward y paso. El scheduler se actualiza después del optimizador. train y eval cambian dropout y normalización; no son un detalle opcional."},{"id":"ml10l3","num":39,"lnum":3,"title":"Guardar, cargar y depurar un entrenamiento","href":"ml10l3.html","kind":"lesson","search":"state_dict frente a objetos completos Checkpoints para reanudar Depurar con un lote pequeño state_dict es portable; el objeto completo depende de la definición de la clase. Un checkpoint reanudable incluye optimizador, scheduler y época. Sobreajustar un lote pequeño separa fallos de modelo de fallos de datos. La pérdida inicial debe coincidir con lo esperado para una predicción aleatoria."},{"id":"ml10q","num":40,"lnum":4,"title":"Cierre del módulo 10","href":"ml10q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Los tensores combinan forma, tipo y dispositivo; cada cambio puede alterar el cálculo. Autograd construye y consume un grafo nuevo en cada iteración. El bucle de entrenamiento tiene un orden estricto y modos distintos para entrenar y evaluar. Guardar pesos, optimizador y configuración es lo que hace reproducible un experimento."}]},{"num":"11","title":"Entrenamiento de redes profundas","lessons":[{"id":"ml11l1","num":41,"lnum":1,"title":"Activaciones, inicialización y gradientes","href":"ml11l1.html","kind":"lesson","search":"El problema del gradiente Inicializaciones que respetan la escala Activaciones modernas Gradientes que se encogen o explotan impiden que las capas profundas aprendan. Inicializar a cero rompe la simetría entre neuronas. Xavier y He ajustan la escala según el tipo de activación. ReLU y sus variantes mitigan el desvanecimiento, no lo eliminan por completo."},{"id":"ml11l2","num":42,"lnum":2,"title":"Normalización, dropout y regularización","href":"ml11l2.html","kind":"lesson","search":"Normalización por lotes Dropout Otras palancas La normalización por lotes estabiliza la escala y permite tasas más altas. En evaluación se usan estadísticas acumuladas, no las del lote. Dropout reduce la dependencia de unidades concretas y se desactiva al evaluar. Las técnicas de regularización se combinan con validación, no por acumulación."},{"id":"ml11l3","num":43,"lnum":3,"title":"Optimizadores, programación de la tasa y parada","href":"ml11l3.html","kind":"lesson","search":"SGD con momento y métodos adaptativos Programar la tasa de aprendizaje Parada temprana y selección del mejor punto SGD con momento y Adam responden a necesidades distintas de escala y dispersión. La tasa de aprendizaje se programa; el calentamiento evita divergencias iniciales. La parada temprana guarda el mejor punto según validación. La paciencia debe adaptarse al ruido de la métrica elegida."},{"id":"ml11q","num":44,"lnum":4,"title":"Cierre del módulo 11","href":"ml11q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios La estabilidad del gradiente depende de la activación, la inicialización y la escala de los pesos. Normalización y dropout controlan escala y dependencia excesiva de unidades concretas. El optimizador y la programación de la tasa cambian la velocidad y la calidad final. La parada temprana elige el mejor punto de validación, no el último paso del entrenamiento."}]},{"num":"12","title":"Modelos personalizados","lessons":[{"id":"ml12l1","num":45,"lnum":1,"title":"Capas y bloques propios","href":"ml12l1.html","kind":"lesson","search":"Cuándo merece la pena El contrato de una capa Bloques y composición Una capa propia se justifica por reutilización o control fino, no por evitación. Los parámetros se registran; los tensores persistentes no entrenables, como buffers. El forward debe validar formas y fallar con un mensaje claro. Los bloques pequeños y las conexiones residuales facilitan modelos profundos."},{"id":"ml12l2","num":46,"lnum":2,"title":"Pérdidas y métricas a medida","href":"ml12l2.html","kind":"lesson","search":"De logits a pérdida Ponderar errores Métricas separadas de la pérdida Trabaja con logits y log-softmax para evitar inestabilidad numérica. Los pesos por clase cambian el modelo y obligan a recalcular el umbral. La métrica se calcula sin gradiente y se acumula por época. Medir por subgrupo revela fallos que el promedio global esconde."},{"id":"ml12l3","num":47,"lnum":3,"title":"Depurar un modelo que no aprende","href":"ml12l3.html","kind":"lesson","search":"Comprobar lo básico Sobreajustar un lote Diagnóstico por síntoma Verifica alineación de datos, etiquetas y formas antes de tocar hiperparámetros. Sobreajustar un lote pequeño confirma que el circuito de aprendizaje funciona. La pérdida inicial debe parecerse a la de una predicción aleatoria. Cada síntoma —plana, oscilante, NaN— apunta a una causa distinta."},{"id":"ml12q","num":48,"lnum":4,"title":"Cierre del módulo 12","href":"ml12q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Una capa propia se escribe cuando aporta reutilización o control, no por costumbre. Las pérdidas personalizadas deben probarse contra una referencia y documentarse con sus pesos. La métrica se mantiene separada de la pérdida y se mide por subgrupo. Depurar empieza por datos, formas y un lote pequeño antes de ajustar hiperparámetros."}]},{"num":"13","title":"Cargar y preparar datos con PyTorch","lessons":[{"id":"ml13l1","num":49,"lnum":1,"title":"Dataset y DataLoader propios","href":"ml13l1.html","kind":"lesson","search":"El contrato del Dataset Orden, lotes y procesos Errores frecuentes y diagnóstico __init__ describe, __len__ cuenta y __getitem__ devuelve un ejemplo independiente. El DataLoader decide lote, orden y paralelismo; el Dataset no debería saberlo. Barajar en entrenamiento y no en validación cambia el significado de la métrica. Mide cargador y modelo por separado antes de añadir procesos."},{"id":"ml13l2","num":50,"lnum":2,"title":"Transformaciones, aumento de datos y colación","href":"ml13l2.html","kind":"lesson","search":"Transformar sin romper el contrato Aumento de datos y sus límites Colación y tamaños variables Entrena con transformaciones aleatorias y evalúa con una tubería determinista. El aumento de datos debe preservar la etiqueta; si la cambia, es ruido. Normalize usa media y desviación calculadas solo con el conjunto de entrenamiento. collate_fn resuelve tamaños variables y devuelve las máscaras que la pérdida necesita."},{"id":"ml13l3","num":51,"lnum":3,"title":"Tuberías eficientes para datos grandes","href":"ml13l3.html","kind":"lesson","search":"Datos que no caben en memoria Caché y streaming Memoria compartida y cuellos de botella Parquet y Arrow reducen lectura cuando solo necesitas una parte de las columnas. memmap rinde si el orden de acceso coincide con el orden físico del archivo. Una caché en disco válida incluye versión, resolución y estadísticas de normalización. Los procesos del cargador copian por memoria compartida: mide antes de añadir workers."},{"id":"ml13q","num":52,"lnum":4,"title":"Cierre del módulo 13","href":"ml13q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios El Dataset describe un ejemplo y el DataLoader organiza lotes, orden y paralelismo. Mantener esa separación permite probar y paralelizar el código sin reescribirlo. Las transformaciones de entrenamiento pueden ser aleatorias; las de evaluación no. Normaliza con estadísticas del entrenamiento y comprueba que cada aumento conserva la etiqueta. La colación resuelve los tamaños variables con relleno y máscaras, y permite agrupar por longitud para reducir el trabajo inútil de cada lote. Con datos grandes, los formatos columnares, la caché versionada y el streaming sustituyen la carga completa en memoria. Mide cada etapa antes de ajustar workers."}]},{"num":"14","title":"Visión por computador","lessons":[{"id":"ml14l1","num":53,"lnum":1,"title":"Convolución: compartir pesos y mirar vecindades","href":"ml14l1.html","kind":"lesson","search":"El filtro como detector Compartir pesos Pooling y campo receptivo Un filtro comparte pesos en toda la imagen y detecta un patrón local. Relleno y desplazamiento controlan la forma y la resolución del mapa. Compartir pesos reduce parámetros y añade un supuesto de invariancia espacial. El campo receptivo crece con la profundidad y limita qué puede relacionar la red."},{"id":"ml14l2","num":54,"lnum":2,"title":"Arquitecturas, aumento de datos y entrenamiento","href":"ml14l2.html","kind":"lesson","search":"Bloques que se repiten Aumento de datos Presupuesto de entrenamiento Los bloques conv, normalización y activación construyen una jerarquía de rasgos. Las conexiones residuales permiten profundidad sin degradar la optimización. El aumento de datos debe preservar la etiqueta de cada transformación. Resolución y tamaño de lote determinan el coste y la estabilidad del entrenamiento."},{"id":"ml14l3","num":55,"lnum":3,"title":"Transferencia y evaluación por clase","href":"ml14l3.html","kind":"lesson","search":"Reutilizar un backbone Ajuste fino con cuidado Evaluar por clase y por imagen La transferencia reutiliza rasgos generales y entrena una cabeza nueva. El ajuste fino usa tasas bajas para no destruir los pesos preentrenados. Descongelar por etapas permite detectar cuándo el ajuste deja de ayudar. La evaluación debe mirar clases, condiciones de captura y errores concretos."},{"id":"ml14q","num":56,"lnum":4,"title":"Cierre del módulo 14","href":"ml14q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios La convolución detecta patrones locales compartiendo pesos en toda la imagen. Los bloques apilados construyen rasgos cada vez más abstractos y las residuales facilitan la profundidad. El aumento de datos ayuda solo si las transformaciones respetan la etiqueta. La transferencia ahorra datos y cómputo, pero exige ajustar con tasas bajas y evaluar por subgrupo."}]},{"num":"15","title":"Secuencias y redes recurrentes","lessons":[{"id":"ml15l1","num":57,"lnum":1,"title":"El estado oculto","href":"ml15l1.html","kind":"lesson","search":"Una red que recuerda Desenrollar el tiempo Problemas de orden y longitud El estado oculto resume el pasado y se actualiza en cada paso. Los pesos se comparten a lo largo del tiempo, no se crean por posición. La retropropagación desenrollada cuesta memoria proporcional a la longitud. El relleno debe enmascararse para no contaminar pérdida ni estado."},{"id":"ml15l2","num":58,"lnum":2,"title":"LSTM, GRU y compuertas","href":"ml15l2.html","kind":"lesson","search":"Cómo funciona una compuerta GRU: menos piezas Cuándo usar cada una Las compuertas aprenden cuánta información conservar, añadir o exponer. La LSTM separa memoria interna y salida; la GRU simplifica la celda. Menos parámetros ayudan cuando hay pocos datos; más capacidad exige más ejemplos. Una línea base con retardos debe superarse antes de justificar una recurrente."},{"id":"ml15l3","num":59,"lnum":3,"title":"Evaluación, generación y alternativas","href":"ml15l3.html","kind":"lesson","search":"Métricas por horizonte Generación autoregresiva Alternativas y evaluación temporal El error se reporta por horizonte, no solo como promedio global. La generación autoregresiva acumula desviaciones paso a paso. El profesor forzado no reproduce las condiciones reales de generación. La validación de series temporales respeta el orden temporal."},{"id":"ml15q","num":60,"lnum":4,"title":"Cierre del módulo 15","href":"ml15q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios El estado oculto resume el pasado y se comparte a lo largo de todos los pasos. LSTM y GRU usan compuertas para conservar información durante más tiempo. El error de una secuencia depende del horizonte y debe compararse con una referencia. La validación temporal y la exposición gradual a las propias predicciones evitan sorpresas."}]},{"num":"16","title":"Procesamiento de lenguaje natural","lessons":[{"id":"ml16l1","num":61,"lnum":1,"title":"Del texto a vectores","href":"ml16l1.html","kind":"lesson","search":"Tokenizar no es trivial Embeddings Contexto y orden La tokenización por subpalabras reduce el vocabulario y maneja palabras nuevas. Un embedding es una tabla aprendida de vectores densos por token. Promediar vectores pierde el orden y la estructura de la frase. La dimensión del embedding equilibra matiz, coste y necesidad de datos."},{"id":"ml16l2","num":62,"lnum":2,"title":"Atención y transformers","href":"ml16l2.html","kind":"lesson","search":"Consulta, clave y valor Múltiples cabezas y posición El coste cuadrático La atención compara consultas con claves y pondera valores. Varias cabezas capturan relaciones distintas en paralelo. La información posicional es imprescindible para conservar el orden. El coste crece de forma cuadrática con la longitud de la secuencia."},{"id":"ml16l3","num":63,"lnum":3,"title":"Modelos preentrenados y evaluación","href":"ml16l3.html","kind":"lesson","search":"Preentrenar y ajustar Evaluar más allá de la media Despliegue responsable Partir de un modelo preentrenado reduce datos y cómputo necesarios. Congelar el cuerpo funciona con pocos datos; el ajuste completo exige más. La evaluación debe cubrir subgrupos, calibración y errores concretos. Latencia, privacidad y versiones condicionan el despliegue tanto como la métrica."},{"id":"ml16q","num":64,"lnum":4,"title":"Cierre del módulo 16","href":"ml16q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios La tokenización por subpalabras y los embeddings convierten texto en vectores manejables. La atención conecta posiciones directamente y los transformers la combinan con posición y varias cabezas. El coste cuadrático obliga a controlar la longitud de las secuencias. Preentrenar, ajustar y evaluar por subgrupo son etapas separadas y necesarias."}]},{"num":"17","title":"Autoencoders, GANs y modelos de difusión","lessons":[{"id":"ml17l1","num":65,"lnum":1,"title":"Autoencoders y espacio latente","href":"ml17l1.html","kind":"lesson","search":"Comprimir para entender Variantes que cambian el objetivo Interpolar en el latente El cuello de botella obliga a retener lo esencial; la reconstrucción solo verifica que se logró. Denoising y sparse cambian el objetivo para obtener códigos más robustos o interpretables. El autoencoder variacional modela distribuciones y produce un latente continuo y muestreable. Interpolar solo funciona si el espacio latente está regularizado; si no, aparecen zonas sin sentido."},{"id":"ml17l2","num":66,"lnum":2,"title":"GANs: generador, discriminador y modos colapsados","href":"ml17l2.html","kind":"lesson","search":"Dos redes, un pulso Modo colapsado y otros fallos Estabilizar y medir El generador imita y el discriminador detecta; el aprendizaje vive del desequilibrio controlado. Un discriminador demasiado fuerte anula el gradiente y congela al generador. El modo colapsado produce muestras creíbles y repetidas, invisible en métricas de realismo. FID solo es comparable si el extractor y el conjunto de referencia no cambian."},{"id":"ml17l3","num":67,"lnum":3,"title":"Modelos de difusión","href":"ml17l3.html","kind":"lesson","search":"Destruir despacio Recorrer el camino inverso Condicionar y vigilar el coste La fase directa es un calendario de ruido; la red solo aprende a predecir ese ruido. El muestreo invierte los pasos y su número decide el trueque entre calidad y latencia. El texto se inyecta en el denoiser y la guía regula obediencia frente a variedad. El coste por imagen se mide en pasadas completas por la red, no en segundos de promesa."},{"id":"ml17q","num":68,"lnum":4,"title":"Cierre del módulo 17","href":"ml17q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Un autoencoder comprime con un cuello de botella y usa la reconstrucción como prueba de que el código conserva lo esencial. Las variantes denoising, sparse y variacional cambian el objetivo; el variacional aporta un latente continuo y muestreable. Una GAN alterna generador y discriminador, y su fragilidad se manifiesta en oscilaciones y modos colapsados. La difusión invierte un proceso de ruido; genera con calidad alta a cambio de muchas pasadas por la red."}]},{"num":"18","title":"Aprendizaje por refuerzo","lessons":[{"id":"ml18l1","num":69,"lnum":1,"title":"Estados, acciones y recompensas","href":"ml18l1.html","kind":"lesson","search":"El bucle y sus piezas Retorno y descuento Explorar o explotar La política convierte estados en acciones y es lo único que se despliega. El descuento fija el horizonte: sin él, el agente no distingue un coste inmediato de uno lejano. Explorar es obligatorio para aprender; el problema es cuánto y dónde hacerlo. La propiedad de Markov exige que el estado resuma todo lo relevante del pasado."},{"id":"ml18l2","num":70,"lnum":2,"title":"Q-learning y gradientes de política","href":"ml18l2.html","kind":"lesson","search":"Q-learning y Bellman Redes Q y repetición Política y actor-crítico Q-learning estima valores y deriva la política sin seguirla durante el entrenamiento. Replay buffer y red objetivo existen para romper correlación y fijar el objetivo. REINFORCE es correcto pero ruidoso; sufre con horizontes largos. La ventaja en actor-crítico reduce varianza comparando con lo esperado, no con el retorno bruto."},{"id":"ml18l3","num":71,"lnum":3,"title":"Entrenar agentes: estabilidad y evaluación","href":"ml18l3.html","kind":"lesson","search":"Recompensa escasa y diseño Estabilidad Evaluar agentes Una recompensa escasa no enseña; una recompensa mal diseñada enseña lo incorrecto. La media de una sola semilla no es evidencia: reporta mediana y dispersión. La entropía indica si el agente sigue explorando o ya colapsó a una política fija. Evalúa con política congelada y compara contra aleatorio y heurística antes de ajustar nada."},{"id":"ml18q","num":72,"lnum":4,"title":"Cierre del módulo 18","href":"ml18q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios El refuerzo formaliza la decisión como estados, acciones y recompensas dentro de un proceso de Markov. El descuento y la exploración son decisiones de diseño que cambian qué aprende el agente. Q-learning estima valores; los métodos de política ajustan directamente la regla de decisión. La estabilidad y la evaluación con varias semillas separan un experimento de un agente desplegable."}]},{"num":"19","title":"Entrenamiento y despliegue a escala","lessons":[{"id":"ml19l1","num":73,"lnum":1,"title":"Entrenamiento distribuido y datos a escala","href":"ml19l1.html","kind":"lesson","search":"Datos contra modelo Precisión y acumulación Puntos de control El paralelo de datos escala hasta que la comunicación domina el tiempo del paso. El paralelo de modelo es obligatorio cuando los pesos no caben en un dispositivo. Precisión mixta y acumulación ahorran memoria, pero cambian el tamaño efectivo del lote. Un checkpoint solo sirve si incluye optimizador, datos y semilla, y si se probó la reanudación."},{"id":"ml19l2","num":74,"lnum":2,"title":"Servir modelos y optimizar la inferencia","href":"ml19l2.html","kind":"lesson","search":"Serializar sin sorpresas Comprimir y acelerar Latencia, lote y caché Exportar a un formato intermedio revela dependencias ocultas del código de entrenamiento. Cuantizar y destilar abaratan la inferencia, siempre que el error se mida en validación. El throughput mejora con lotes; la experiencia del usuario depende del percentil alto. Caché y batching dinámico necesitan invalidación y contrato de API bien definidos."},{"id":"ml19l3","num":75,"lnum":3,"title":"Monitorización, deriva y mantenimiento","href":"ml19l3.html","kind":"lesson","search":"Dos deriva distintas Qué medir y cuándo alertar Reentrenar y auditar La deriva de datos se ve en las entradas; la de concepto exige etiquetas reales. Toda alerta necesita umbral, dueño y una acción definida de antemano. Las métricas agregadas esconden fallos concentrados en segmentos pequeños. Reentrenar sin criterio de promoción y sin trazabilidad convierte la mejora en riesgo."},{"id":"ml19q","num":76,"lnum":4,"title":"Cierre del módulo 19","href":"ml19q.html","kind":"quiz","search":"evaluación cierre repaso preguntas ejercicios Distribuir entrenamiento exige elegir entre datos y modelo, y medir cuánto cuesta sincronizar. Precisión mixta, acumulación y checkpoints reanudables hacen viable el cómputo largo. Servir un modelo implica exportar, comprimir y equilibrar latencia con throughput. La deriva y el mantenimiento se gestionan con registro, métricas por segmento y criterios de reentrenamiento."}]}]};</script>
+<script src="js/curso.js"></script>
+</body>
+</html>

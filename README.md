@@ -27,25 +27,30 @@ assets/fonts/              Tipografías locales
 Machine-Learning-Esencial.pdf
 ```
 
+## Ver en línea
+
+- Sitio: https://joelelizalde.github.io/ml-esencial/
+- Repositorio: https://github.com/joelelizalde/ml-esencial
+- PDF: https://raw.githubusercontent.com/joelelizalde/ml-esencial/main/Machine-Learning-Esencial.pdf
+
 ## Publicar en GitHub Pages
+
+El sitio ya está publicado desde la rama `main`, carpeta raíz. Para actualizarlo:
 
 ```bash
 cd ml-esencial
-git init
 git add .
-git commit -m "Machine Learning en español"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/ml-esencial.git
-git push -u origin main
+git commit -m "Actualiza el manual"
+git push origin main
 ```
 
-Después: **Settings → Pages → Deploy from a branch → main → / (root)**.
+Para publicarlo desde cero en otra cuenta: **Settings → Pages → Deploy from a branch → main → / (root)**.
 
 ## Regenerar
 
 ```bash
-python build_site.py          # solo el sitio
-python build_site.py --pdf    # sitio + manual en PDF
+python3 build_site.py          # solo el sitio
+python3 build_site.py --pdf    # sitio + manual en PDF
 ```
 
 El PDF se compone con WeasyPrint a partir del mismo contenido.
